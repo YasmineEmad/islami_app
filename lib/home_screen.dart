@@ -4,9 +4,8 @@ import 'package:islami_app/tabs/quran.dart';
 import 'package:islami_app/tabs/radio.dart';
 import 'package:islami_app/tabs/sebha.dart';
 import 'package:islami_app/tabs/settings.dart';
-
 import 'my_theme.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class HomeScreen extends StatefulWidget {
   static const String routeName = 'home';
 
@@ -24,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
         Image.asset('assets/images/background.png',width:double.infinity,fit: BoxFit.fill,),
         Scaffold(
         appBar: AppBar(
-          title: Text("اسلامي",style: Theme.of(context).textTheme.bodyLarge,),
+          title: Text(AppLocalizations.of(context)!.islami,style: Theme.of(context).textTheme.bodyLarge,),
         ),
           bottomNavigationBar: BottomNavigationBar(
             onTap: (value) {
@@ -37,17 +36,16 @@ class _HomeScreenState extends State<HomeScreen> {
             items: [
               BottomNavigationBarItem(
                 icon: ImageIcon(AssetImage('assets/images/radio.png')),
-                label: "radio"
+                label: AppLocalizations.of(context)!.radio
                 ,backgroundColor: MyTheme.primary,),
               BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/images/sebha.png')),
-                label: "sebha",backgroundColor: MyTheme.primary,),
+                label: AppLocalizations.of(context)!.sebha,backgroundColor: MyTheme.primary,),
               BottomNavigationBarItem(icon:ImageIcon(AssetImage('assets/images/ahadeth.png')),
-                label:"ahadeth" ,backgroundColor: MyTheme.primary,),
+                label:AppLocalizations.of(context)!.ahadeth ,backgroundColor: MyTheme.primary,),
               BottomNavigationBarItem(icon:ImageIcon(AssetImage('assets/images/quran.png'))
-                ,label:"quran",backgroundColor: MyTheme.primary,),
+                ,label:AppLocalizations.of(context)!.quran,backgroundColor: MyTheme.primary,),
               BottomNavigationBarItem(icon:Icon(Icons.settings)
-                ,label:"settings",backgroundColor: MyTheme.primary,),
-
+                ,label:AppLocalizations.of(context)!.settings,backgroundColor: MyTheme.primary,),
             ],
           ),
           body:tabs[index],

@@ -1,3 +1,11 @@
 {
-  "helloWorld": "Hello World!"
+  "islami": "Islami",
+  "radio": "radio",
+  "sebha": "sebha",
+  "ahadeth": "ahadeth",
+  "quran": "quran",
+  "settings": "settings",
+  "numberOfPraises": "Number of praises",
+  "quranRadio": "Holy Quran Radio",
+  "suraName" : "Sura Name"
 }
