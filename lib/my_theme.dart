@@ -8,7 +8,8 @@ class MyTheme {
   static ThemeData lightTheme = ThemeData(
       textTheme: TextTheme(
         bodyLarge: GoogleFonts.elMessiri(fontSize: 30,fontWeight: FontWeight.bold,color: blackColor),
-        bodyMedium: GoogleFonts.elMessiri(fontSize: 20,fontWeight: FontWeight.bold,color: blackColor)
+        bodyMedium: GoogleFonts.elMessiri(fontSize: 20,fontWeight: FontWeight.bold,color: blackColor),
+        bodySmall: GoogleFonts.elMessiri(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.white),
       ),
       scaffoldBackgroundColor: Colors.transparent,
       appBarTheme: AppBarTheme(
