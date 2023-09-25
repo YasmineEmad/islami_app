@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:islami_app/my_theme.dart';
 import 'package:islami_app/sura_details.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'hadeth_details.dart';
 import 'home_screen.dart';
 
 void main() {
@@ -20,7 +20,8 @@ class MyApp extends StatelessWidget {
        initialRoute: HomeScreen.routeName,
       routes: {
          HomeScreen.routeName:(context) => HomeScreen(),
-        SuraDetails.routeName:(context) => SuraDetails()
+        SuraDetails.routeName:(context) => SuraDetails(),
+        HadethDetails.routeName:(context) => HadethDetails(),
       },
       debugShowCheckedModeBanner: false,
       theme: MyTheme.lightTheme,

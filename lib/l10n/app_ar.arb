@@ -1,3 +1,11 @@
 {
-  "helloWorld": "هلا"
+  "islami": "إسلامي",
+  "radio": "الراديو",
+  "sebha": "السبحة",
+  "ahadeth": "الأحاديث",
+  "quran": "القرأن",
+  "settings": "الإعدادات",
+  "numberOfPraises": "عدد التسبيحات",
+  "quranRadio": "إذاعة القرأن الكريم",
+  "suraName" : "اسم السورة"
 }

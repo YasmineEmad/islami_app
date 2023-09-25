@@ -27,6 +27,4 @@ class MyTheme {
     )
   );
   static ThemeData darkTheme = ThemeData();
-
-
 }

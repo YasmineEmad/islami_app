@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/my_theme.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class SebhaTab extends StatefulWidget {
   @override
   State<SebhaTab> createState() => _SebhaTabState();
@@ -32,7 +32,7 @@ class _SebhaTabState extends State<SebhaTab> {
             child: Center(child: Image.asset("assets/images/sebhaLogo.png",))),
         Padding(
           padding: const EdgeInsets.only(top: 30,bottom: 20),
-          child: Text("عدد التسبيحات",style: Theme.of(context).textTheme.bodyMedium,),
+          child: Text(AppLocalizations.of(context)!.numberOfPraises,style: Theme.of(context).textTheme.bodyMedium,),
         ),
         Container(
           alignment: Alignment.center,
