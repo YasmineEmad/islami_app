@@ -7,5 +7,11 @@
   "settings": "الإعدادات",
   "numberOfPraises": "عدد التسبيحات",
   "quranRadio": "إذاعة القرأن الكريم",
-  "suraName" : "اسم السورة"
+  "suraName" : "اسم السورة",
+  "language": "اللغة",
+  "english": "اللغة الإنجليزية",
+  "arabic": "اللغة اللعربية",
+  "mode": "الوضع",
+  "lightMode": "وضع مضئ",
+  "darkMode": "وضع مظلم"
 }
