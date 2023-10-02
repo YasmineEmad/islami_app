@@ -30,6 +30,7 @@ class MyApp extends StatelessWidget {
         HadethDetails.routeName:(context) => HadethDetails(),
       },
       debugShowCheckedModeBanner: false,
+      themeMode: provider.theme,
       theme: MyTheme.lightTheme,
       darkTheme: MyTheme.darkTheme,
     );
