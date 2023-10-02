@@ -3,6 +3,9 @@ import 'package:islami_app/my_theme.dart';
 import 'package:islami_app/sura_details.dart';
 import 'package:islami_app/models/sura_model.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:provider/provider.dart';
+
+import '../providers/my_provider.dart';
 
 class QuranTab extends StatelessWidget {
   List <String> suraNames =["الفاتحه","البقرة","آل عمران","النساء","المائدة","الأنعام","الأعراف","الأنفال","التوبة","يونس","هود"
@@ -17,25 +20,26 @@ class QuranTab extends StatelessWidget {
     "الهمزة","الفيل","قريش","الماعون","الكوثر","الكافرون","النصر","المسد","الإخلاص","الفلق","الناس"];
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<MyProvider>(context);
     return Center(
       child: Column(
         children: [
           Image.asset("assets/images/quran_image.png"),
           Divider(
             thickness: 2,
-            color: MyTheme.primary,
+            color: provider.theme == ThemeMode.light ?MyTheme.primary:MyTheme.yellowColor,
           ),
           Text(AppLocalizations.of(context)!.suraName,style: Theme.of(context).textTheme.bodyLarge,),
           Divider(
             thickness: 2,
-            color: MyTheme.primary,
+            color: provider.theme == ThemeMode.light ?MyTheme.primary:MyTheme.yellowColor,
           ),
           Expanded(
             child: ListView.separated(
               separatorBuilder: (context, index) {
                 return Divider(
                   thickness: 1,
-                  color: MyTheme.primary,
+                  color:  provider.theme == ThemeMode.light ?MyTheme.primary:MyTheme.yellowColor,
                   indent: 30,
                   endIndent: 30,
                 );

@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami_app/hadeth_details.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:provider/provider.dart';
 import '../models/hadeth_model.dart';
 import '../my_theme.dart';
+import '../providers/my_provider.dart';
 
 class AhadethTab extends StatefulWidget {
   const AhadethTab({super.key});
@@ -16,6 +18,8 @@ class _AhadethTabState extends State<AhadethTab> {
   List<HadethModel> ahadethList = [];
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<MyProvider>(context);
+
     if(ahadethList.isEmpty){
       loadHadeth();
     }
@@ -23,7 +27,7 @@ class _AhadethTabState extends State<AhadethTab> {
       Image.asset("assets/images/ahadeth_image.png"),
       Divider(
         thickness: 2,
-        color: MyTheme.primary,
+        color: provider.theme == ThemeMode.light ?MyTheme.primary:MyTheme.yellowColor,
       ),
       Text(
         AppLocalizations.of(context)!.ahadeth,
@@ -31,7 +35,7 @@ class _AhadethTabState extends State<AhadethTab> {
       ),
       Divider(
         thickness: 2,
-        color: MyTheme.primary,
+        color: provider.theme == ThemeMode.light ?MyTheme.primary:MyTheme.yellowColor,
       ),
       Expanded(
         child: ListView.separated(
@@ -45,7 +49,7 @@ class _AhadethTabState extends State<AhadethTab> {
             separatorBuilder: (context, index) {
               return Divider(
                 thickness: 1,
-                color: MyTheme.primary,
+                color: provider.theme == ThemeMode.light ?MyTheme.primary:MyTheme.yellowColor,
                 indent: 30,
                 endIndent: 30,
               );
